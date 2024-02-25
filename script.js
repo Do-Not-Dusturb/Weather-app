@@ -20,13 +20,15 @@ function getWeather() {
             return response.json();
         })
         .then(data => {
-            const weatherDescription = data.weather[0].description;
+            const city = data.name;
+            const country = data.sys.country;
+            const weather = data.weather[0].main;
             const temperature = data.main.temp;
             const humidity = data.main.humidity;
 
             weatherData.innerHTML = `
-                <h2>${data.name}, ${data.sys.country}</h2>
-                <p>${weatherDescription}</p>
+                <h2>${city}, ${country}</h2>
+                <p>${weather}</p>
                 <p>Temperature: ${temperature}°F</p>
                 <p>Humidity: ${humidity}%</p>
             `;
