@@ -1,4 +1,4 @@
-const apiKey = '3ccb53d4c43819a246d23fa0381a146b';
+const apiKey = '5f6e24db1678b4e81bff4d565266338a';
 const baseUrl = 'https://api.openweathermap.org/data/2.5/weather?q=';
 const units = 'imperial'; // Request temperature in Fahrenheit
 
